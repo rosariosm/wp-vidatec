@@ -1,0 +1,39 @@
+#setting-error-tgmpa, #setting-error-nt-big-border {display: block !important;}
+.rwmb-heading-wrapper h4 {
+    font-weight: 700;
+}
+.rwmb-tabs-box .rwmb-tab-nav .rwmb-tab-active, .rwmb-tabs-box .rwmb-tab-nav .rwmb-tab-active:hover {
+    background: #0085ba !important;
+    border-color: #0085ba !important;
+}
+.rwmb-tabs-box .rwmb-tab-nav .rwmb-tab-active a {
+    color: #fff !important;
+}
+.rwmb-tab-panel {
+    padding-bottom: 10px !important;
+    padding-left: 15px !important;
+}
+.rwmb-tab-panel .rwmb-thickbox_image-wrapper ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.rwmb-image-item .rwmb-media-preview {
+    width: 150px;
+    background: #eee;
+}
+
+.vc_license-activation-notice {
+    display: none!important;
+}
+.hide-color-picker {
+    display: inherit !important;
+}
+.type-radio-image .format-setting-inner > .option-tree-ui-radio-images:nth-child(4),.type-radio-image .format-setting-inner > .option-tree-ui-radio-images:nth-child(5),.type-radio-image .format-setting-inner > .option-tree-ui-radio-images:nth-child(6){
+    display:none !important;
+}
+.ot-theme-option-tabs.ui-tabs .ot-theme-option-nav.ui-tabs-nav li.ui-state-active a, #side-sortables .ot-metabox-tabs.ui-tabs .ot-metabox-nav.ui-tabs-nav li.ui-state-active a {
+    color: white !important;
+    background: #0085ba !important;
+    box-shadow: none !important;
+}
