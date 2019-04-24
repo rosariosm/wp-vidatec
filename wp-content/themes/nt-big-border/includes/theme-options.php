@@ -2371,7 +2371,7 @@ function nt_big_border_custom_theme_options() {
 			array(
 				'id' => 'nt_big_border_copyright',
 				'label' => 'Footer copyright',
-				'std' => 'Launch beautiful, responsive websites faster with themes',
+				'std' => '',
 				'rows' => '10',
 				'type' => 'textarea',
 				'section' => 'copyright'

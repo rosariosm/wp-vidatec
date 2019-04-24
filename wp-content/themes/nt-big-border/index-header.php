@@ -38,24 +38,11 @@
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 template-logo">
 					<a href="#" class="js-template-mobile-toggle template-nav-toggle"><i></i></a>
 
-					<?php if ( ( $nt_big_border_logo_option ) == 'text' || ( $nt_big_border_logo_option ) == '') : ?>
-						<?php if ( $nt_big_border_text_logo ) : ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-logo"><?php echo esc_html( $nt_big_border_text_logo ); ?></a> <!-- Your Logo -->
-						<?php  else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-logo"><?php esc_html_e( 'BIG Border', 'nt-big-border' ); ?></a> <!-- Your Logo -->
-						<?php endif; ?>
-					<?php endif; ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-logo">		
+						<img style="width: 100%" src="http://localhost/wordpress/wp-content/uploads/2019/04/LOGO_TICMAS-e1556077171815.png">
+					</a> <!-- Your Logo -->
 
-					<?php if (( $nt_big_border_logo_option ) == 'img' ) : ?>
-						<?php if ( $nt_big_border_img_logo  ) : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="main-logo img-logo"><img class="responsive-img" src="<?php echo esc_url( $nt_big_border_img_logo ); ?>" alt="<?php esc_html_e( 'Logo', 'nt-big-border' ); ?>"></a> <!-- Your Logo -->
-							<?php if ( $nt_big_border_img_logo2 ) : ?>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sticky-logo img-logo"><img class="responsive-img" src="<?php echo esc_url( $nt_big_border_img_logo2 ); ?>" alt="<?php esc_html_e( 'Logo', 'nt-big-border' ); ?>"></a> <!-- Your Logo -->
-							<?php endif; ?>
-							<?php  else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-logo"><?php esc_html_e( 'BIG Border', 'nt-big-border' ); ?></a> <!-- Your Logo -->
-						<?php endif; ?>
-					<?php endif; ?>
+					
 
 				</div>
 

@@ -80,22 +80,7 @@ if ( ! function_exists( 'nt_big_border_footer' ) ) :
 					?>
 				</div>
 
-				<!-- footer copyright -->
-				<?php if ( ot_get_option('nt_big_border_copyright_visibility') != 'off') : ?>
-				<div class="row template-made">
-					<div class="col-md-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-						<?php
-							if ( ot_get_option('nt_big_border_copyright') != '') :
-							$nt_big_border_copyright = ot_get_option('nt_big_border_copyright');
-
-							echo wp_kses( $nt_big_border_copyright, nt_big_border_allowed_html());
-							else :
-						?>
-							<p><?php echo esc_html_e( 'Ninetheme. All Rights Reserved.', 'nt-big-border' ); ?> <i class="heart icon-heart"></i> <?php echo esc_html_e( ' in Space', 'nt-big-border' ); ?></p>
-						<?php endif; ?>
-					</div>
-				</div>
-				<?php endif; ?>
+				
 
 			</div>
 		</div>
