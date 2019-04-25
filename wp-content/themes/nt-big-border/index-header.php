@@ -39,7 +39,7 @@
 					<a href="#" class="js-template-mobile-toggle template-nav-toggle"><i></i></a>
 
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-logo">		
-						<img style="width: 100%" src="http://localhost/wordpress/wp-content/uploads/2019/04/LOGO_TICMAS-e1556077171815.png">
+						<img src="http://localhost/wordpress/wp-content/uploads/2019/04/LOGO_TICMAS-e1556077171815.png">
 					</a> <!-- Your Logo -->
 
 					

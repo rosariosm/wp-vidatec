@@ -148,8 +148,8 @@ function nt_big_border_css_options() {
     $navitemhover = esc_attr( ot_get_option( 'nt_big_border_navitemhover' ) );
 
 	if ( $nav_bg !='' ) { $theCSS .= '.template-nav-style-1 { background-color: '. $nav_bg .' !important; }'; }
-    if ( $nav_padt !='' ) { $theCSS .= '.template-nav-style-1 { padding-top: '. $nav_padt .'px !important;}'; }
-    if ( $nav_padb !='' ) { $theCSS .= '.template-nav-style-1 { padding-bottom: '. $nav_padb .'px !important;}'; }
+    if ( $nav_padt !='' ) { $theCSS .= '.template-nav-style-1 { padding-top: '. $nav_padt .'px;}'; }
+    if ( $nav_padb !='' ) { $theCSS .= '.template-nav-style-1 { padding-bottom: '. $nav_padb .'px;}'; }
 	if ( $nav_menu_ifs != 0 ) { $theCSS .= '.template-nav-style-1 .template-link-wrap ul li a { font-size: '. $nav_menu_ifs .'px !important; }'; }
 	if ( $navitem !='' ) { $theCSS .= '.template-nav-style-1 .template-link-wrap ul li a { color: '. $navitem .' !important; }'; }
 	if ( $navitemhover !='' ) { $theCSS .= '.template-nav-style-1 .template-link-wrap ul li a:hover { color: '. $navitemhover .' !important; }'; }
