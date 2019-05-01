@@ -219,14 +219,14 @@ function nt_big_border_cover_vc( $atts, $content = null ) {
 	$out = ''; // start
 	$out .= '<div class="template-cover template-cover-style-2 js-full-height section-class-scroll '. esc_attr($css_class) . '" '.$id.' data-stellar-background-ratio="0.5" data-next="yes">';
 
-
+        /*TODO: FIX SCROLL TO ID
 		if ( $scroll_id !=''){
 		$out .= '<span class="scroll-btn wow" data-wow-duration="1s" data-wow-delay="1.4s">';
 			$out .= '<a '. $s_id .'>';
 				$out .= '<span class="mouse"><span></span></span>';
 			$out .= '</a>';
 		$out .= '</span>';
-		}
+		}*/
 
 		$out .= '<style>';
          $out .= ' .hero-headline span { color: '. $c_1 .' ;}';
@@ -248,11 +248,11 @@ function nt_big_border_cover_vc( $atts, $content = null ) {
 								$out .= '<span class="cd-words-wrapper"><b class="is-visible">'. $headline1 .'</b><b>'. $headline2 .'</b><b>'. $headline3 .'</b><b>'. $headline4 .'</b></span>';
 							$out .= '</h2>';
 
-							$out .= '<h2 class="cover-text-lead-off wow" data-wow-duration="1s" data-wow-delay=".5s">';
+							/*$out .= '<h2 class="cover-text-lead-off wow" data-wow-duration="1s" data-wow-delay=".5s">';
 								$out .= '<span class="relative fifth-border colored-lable-2 wow color-white" data-wow-duration="1s" data-wow-delay=".5s">'. $heading .'<span class="tape-white color-white"></span></span>';
 								$out .= '<span class="relative fifth-border colored-lable-2 wow fadeInUp  color-third" data-wow-duration="1.2s" data-wow-delay=".6s">'. $heading2 .'<span class="tape-white color-white"></span></span>';
 								$out .= '<span class="relative fifth-border colored-lable-2 wow fadeInUp  color-white" data-wow-duration="1.4s" data-wow-delay=".7s">'. $heading3 .'</span>';
-							$out .= '</h2>';
+							$out .= '</h2>';*/
 							$out .= '<h2 class="cover-text-sublead wow" data-wow-duration="1s" data-wow-delay=".8s">'. $description .'</h2>';
 							if ( $a_title !=''){
 								$out .= '<p class="wow" data-wow-duration="1s" data-wow-delay="1.1s"><a '. $link_a_href . ' '. $link_a_target .' class="btn btn-primary btn-outline btn-lg">'. esc_html($link_a_title) . '</a></p>';
@@ -347,7 +347,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			if( $section_heading !='' ) {
 				$out .= '<div class="col-md-6 col-md-offset-3 text-center">';
 					$out .= '<h2 class="cd-headline slide">';
-						$out .= '<span class="section-heading"'. $section_heading .'  </span>';
+						$out .= '<span class="section-heading">'. $section_heading .'  </span>';
 						$out .= '<span class="cd-words-wrapper"><b class="is-visible">'. $headline1 .'</b><b>'. $headline2 .'</b><b>'. $headline3 .'</b><b>'. $headline4 .'</b></span>';
 					$out .= '</h2>';
 				$out .= '</div>';
@@ -356,7 +356,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			if( $heading1 !='' ) {
 				$out .= '<div class="col-md-4">';
 					$out .= '<div class="fifth-border color-fourth box1 colored-boxes lg-margin-b-30 border-radius-off">';
-						$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label1 .'</span>';
+						/*$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label1 .'</span>';*/
 						$out .= '<h3 class="template-heading wow" data-wow-duration="1s" data-wow-delay=".5s">'. $heading1 .'</h3>';
 						$out .= '<p>'. $description1 .'</p>';
 					$out .= '</div>';
@@ -377,7 +377,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			if( $heading4 !='' ) {
 				$out .= '<div class="col-md-4">';
 					$out .= '<div class="fifth-border color-fourth box4 colored-boxes lg-margin-b-30 border-radius-off">';
-						$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label4 .'</span>';
+						/*$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label4 .'</span>';*/
 						$out .= '<h3 class="template-heading wow" data-wow-duration="1s" data-wow-delay=".5s">'. $heading4 .'</h3>';
 						$out .= '<p>'. $description4 .'</p>';
 					$out .= '</div>';
@@ -442,7 +442,7 @@ function nt_big_border_about_2_vc( $atts, $content = null ) {
 
 				$out .= '<div class="col-lg-8 col-md-12 box5 outer">';
 					$out .= '<div class="col-md-6 inside  color-second colored-boxes md-margin-b-30 border-radius-off padding-off ouhgter-height" '. $bg_img_url .'></div>';
-					$out .= '<span class="colored-lable-inner wow hvr-grow absolute color-white bg-color-blue" data-wow-duration="1s" data-wow-delay=".5s">'. $label .'</span>';
+					/*$out .= '<span class="colored-lable-inner wow hvr-grow absolute color-white bg-color-blue" data-wow-duration="1s" data-wow-delay=".5s">'. $label .'</span>';*/
 					$out .= '<div class="col-md-6 inside color-white colored-boxes  border-radius-off bg-color-blue">';
 						$out .= '<h3 class="template-heading wow color-white" data-wow-duration="1s" data-wow-delay=".5s">'. $heading1 .'</h3>';
 						$out .= '<p>'. $description1 .'</p>';
@@ -1225,7 +1225,8 @@ function nt_big_border_features_grid_2_vc( $atts, $content = null ) {
 					$out .= '<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 template-feature wow fadeInUp equalize matchheightclass" data-wow-duration="1s" '.$delay.'>';
 						 if ( isset($fig['item_icon'])){  $out .= '<div class="template-icon"><i class="'.$fig['item_icon'].'"></i></div>'; }
 						$out .= '<div class="template-desc">';
-							 if ( isset($fig['item_heading'])){ $out .= '<h3>'.$fig['item_heading'].'<span> '.$fig['item_mini_heading'].'</span></h3>'; }
+							 /*if ( isset($fig['item_heading'])){ $out .= '<h3>'.$fig['item_heading'].'<span> '.$fig['item_mini_heading'].'</span></h3>'; }*/
+							 if ( isset($fig['item_heading'])){ $out .= '<h3>'.$fig['item_heading'].'</h3>'; }
 							 if ( isset($fig['item_desc'])){ $out .= '<p>'.$fig['item_desc'].'</p>'; }
 						$out .= '</div>	';
 					$out .= '</div>';

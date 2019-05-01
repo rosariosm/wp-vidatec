@@ -532,6 +532,11 @@ a:hover .lnk-icon-right {
   #template-offcanvass {
     display: block;
   }
+
+  .cd-headline.rotate-3 .cd-words-wrapper {
+    font-size: 0.7em;
+  }
+
 }
 #template-offcanvass a {
   color: rgba(255, 255, 255, 0.5);
@@ -664,6 +669,7 @@ a:hover .lnk-icon-right {
   z-index: 9999;
   width: 100%;
   margin-top : 0px;
+  top: 0px !important;
   background: #fff6;
 }
 
@@ -3711,7 +3717,9 @@ a:hover .lnk-icon-right {
 	background: #570000;
 	position: absolute;
 }
-.inside { min-height: 416px;}
+.inside { 
+  background-size: cover;
+  min-height: 416px;}
 
 
 .overlay{
@@ -3721,7 +3729,7 @@ a:hover .lnk-icon-right {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0,0,0,0.5);
+  /*background-color: rgba(0,0,0,0.5);*/
 }
 
 .quote-company {
@@ -4174,4 +4182,9 @@ padding: 1em;
     line-height: 50px;
   }
 
+  
+}
+
+.cd-words-wrapper {
+  width: 248px !important;
 }

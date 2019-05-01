@@ -13,6 +13,16 @@
 	<!-- BODY START=========== -->
 	<body <?php body_class(); ?>>
 
+		 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-763543-50"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-763543-50');
+</script>
+
 
 	<?php nt_big_border_preloader(); ?>
 
