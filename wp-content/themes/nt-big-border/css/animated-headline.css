@@ -628,6 +628,7 @@ xslide
   vertical-align: top;
   color: #de7c5a;
   min-width: 200px !important;
+  margin-left: 13px;
 }
 .cd-headline.slide b {
   opacity: 0;

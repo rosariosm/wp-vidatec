@@ -436,7 +436,37 @@ a:hover .lnk-icon-right {
 }
 
 .p-b {
-  padding-bottom: 70px;
+  padding: 70px;
+}
+
+.template-features-style-2.section-class-scroll .p-b {
+  padding: 2em;
+  background: #4e4e4d;
+  color: white;
+}
+
+.template-features-style-2.section-class-scroll .row .matchheightclass:nth-child(1) {
+  background: #ec0039;
+  color: white;
+  padding: 2em 1em;
+}
+
+.template-features-style-2.section-class-scroll .row .matchheightclass:nth-child(2) {
+  background: #801685;
+  color: white;
+  padding: 2em 1em;
+}
+
+.template-features-style-2.section-class-scroll .row .matchheightclass:nth-child(3) {
+  background: #00bdd2;
+  color: white;
+  padding: 2em 1em;
+}
+
+.template-features-style-2.section-class-scroll .row .matchheightclass:nth-child(4) {
+  background: #fcd130;
+  color: black;
+  padding: 2em 1em;
 }
 
 @media screen and (max-width: 480px) {
@@ -1971,6 +2001,10 @@ a:hover .lnk-icon-right {
 }
 
 .template-features-style-1 .cd-headline {margin-bottom: 30px;}
+
+.template-features-style-1 .cd-headline .cd-words-wrapper {margin-left: 14px;}
+
+
 
 .template-features-style-1 h3,
 .template-features-style-5 h3 {
@@ -4003,7 +4037,9 @@ a:hover .lnk-icon-right {
   transition: all 0.3s ease-in-out; }
   @media only screen and (max-width: 991px) {
     .feature-2 {
-      padding: 200px 0; } }
+      padding: 200px 0;
+    }
+  }
   .feature-2__wrap {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -4187,4 +4223,64 @@ padding: 1em;
 
 .cd-words-wrapper {
   width: 248px !important;
+}
+
+.bullets {
+  list-style: disc;
+}
+
+
+.custom-icon {
+  padding: 10em 10em 0 0px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 991px) {
+    .feature-2__text{
+      line-height: 23px;
+    }
+    .custom-icon {
+      padding: 6em 6em 0 0px;
+      white-space: nowrap;
+    } 
+
+    .col-schools {
+      background: #58ca7e !important;
+    }
+
+    .col-professors {
+      background: #1784fb !important; 
+    }
+
+    .col-students {
+      background: #ff00af !important;  
+    }
+
+    .col-parents {
+      background: #96049e !important;   
+    }
+
+    .col-ministry {
+      background: #fadf47 !important
+    }
+  }
+
+.student-icon {
+  background:url('../images/ICONO_alumno.svg') center right no-repeat;  
+}
+
+.school-icon {
+  background:url('../images/ICONO_escuela.svg') center right no-repeat;  
+}
+
+.family-icon {
+  background:url('../images/ICONO_familia.svg') center right no-repeat;  
+}
+
+.ministry-icon {
+  background:url('../images/ICONO_ministerio.svg') center right no-repeat;  
+}
+
+.professor-icon {
+  background:url('../images/ICONO_profesor.svg') center right no-repeat;  
 }

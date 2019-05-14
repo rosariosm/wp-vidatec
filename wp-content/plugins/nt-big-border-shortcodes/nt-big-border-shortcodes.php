@@ -1222,7 +1222,7 @@ function nt_big_border_features_grid_2_vc( $atts, $content = null ) {
 
 					$delay = (isset($fig['item_delay']) != '') ? 'data-wow-delay="'. isset($fig['item_delay']) .'s"' : '';
 
-					$out .= '<div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 template-feature wow fadeInUp equalize matchheightclass" data-wow-duration="1s" '.$delay.'>';
+					$out .= '<div class="col-md-3 col-sm-6 col-xs-12 col-xxs-12 template-feature wow fadeInUp equalize matchheightclass" data-wow-duration="1s" '.$delay.'>';
 						 if ( isset($fig['item_icon'])){  $out .= '<div class="template-icon"><i class="'.$fig['item_icon'].'"></i></div>'; }
 						$out .= '<div class="template-desc">';
 							 /*if ( isset($fig['item_heading'])){ $out .= '<h3>'.$fig['item_heading'].'<span> '.$fig['item_mini_heading'].'</span></h3>'; }*/
