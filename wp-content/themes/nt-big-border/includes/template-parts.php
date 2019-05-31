@@ -80,7 +80,16 @@ if ( ! function_exists( 'nt_big_border_footer' ) ) :
 					?>
 				</div>
 
-				
+				<!-- footer copyright -->
+				<?php if ( ot_get_option('nt_big_border_copyright_visibility') != 'off') : ?>
+				<div class="row template-made">
+					<div class="col-md-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+						
+							<p><?php echo esc_html_e( '&copy;TICMAS' ); ?></p>
+						
+					</div>
+				</div>
+				<?php endif; ?>
 
 			</div>
 		</div>

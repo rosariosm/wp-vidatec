@@ -356,7 +356,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			if( $heading1 !='' ) {
 				$out .= '<div class="col-md-4">';
 					$out .= '<div class="fifth-border color-fourth box1 colored-boxes lg-margin-b-30 border-radius-off">';
-						/*$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label1 .'</span>';*/
+						$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label1 .'</span>';
 						$out .= '<h3 class="template-heading wow" data-wow-duration="1s" data-wow-delay=".5s">'. $heading1 .'</h3>';
 						$out .= '<p>'. $description1 .'</p>';
 					$out .= '</div>';
@@ -377,7 +377,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			if( $heading4 !='' ) {
 				$out .= '<div class="col-md-4">';
 					$out .= '<div class="fifth-border color-fourth box4 colored-boxes lg-margin-b-30 border-radius-off">';
-						/*$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label4 .'</span>';*/
+						$out .= '<span class="colored-lable wow absolute color-white bg-color-second" data-wow-duration="1s" data-wow-delay=".5s">'. $label4 .'</span>';
 						$out .= '<h3 class="template-heading wow" data-wow-duration="1s" data-wow-delay=".5s">'. $heading4 .'</h3>';
 						$out .= '<p>'. $description4 .'</p>';
 					$out .= '</div>';
@@ -438,7 +438,7 @@ function nt_big_border_about_2_vc( $atts, $content = null ) {
 
 	$out .= '<div class="template-project-style-2 section-class-scroll">';
 		$out .= '<div class="container">';
-			$out .= '<div class="row">';
+			$out .= '<div class="row flex-relative">';
 
 				$out .= '<div class="col-lg-8 col-md-12 box5 outer">';
 					$out .= '<div class="col-md-6 inside  color-second colored-boxes md-margin-b-30 border-radius-off padding-off ouhgter-height" '. $bg_img_url .'></div>';
@@ -450,7 +450,7 @@ function nt_big_border_about_2_vc( $atts, $content = null ) {
 
 				$out .= '</div>';
 				$out .= '<div class="col-lg-4 col-md-12 box6 relative">';
-					$out .= '<div class="relative  color-white border-color-first  colored-boxes bg-color-fifth  border-radius-off" '. $bg_img_url_2 .'>';
+					$out .= '<div class="relative  color-white border-color-first  colored-boxes bg-color-fifth  border-radius-off flex-relative-height" '. $bg_img_url_2 .'>';
 						$out .= '<h3 class="template-heading wow color-white relative" data-wow-duration="1s" data-wow-delay=".3s">'. $heading2 .'</h3>';
 						$out .= '<p class="wow relative animated" data-wow-duration="1s" data-wow-delay="1s">'. $description2 .'</p>';
 						$out .= '<div class="overlay"></div>';
@@ -1210,10 +1210,10 @@ function nt_big_border_features_grid_2_vc( $atts, $content = null ) {
 		$out .= '<div class="container">';
 
 			$out .= '<div class="row p-b">';
-				$out .= '<div class="col-md-6 col-md-offset-3 text-center">';
+				//$out .= '<div class="col-md-6 col-md-offset-3 text-center">';
 					$out .= '<h2 class="template-heading wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">'. $heading .'</h2>';
-					$out .= '<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">'. $description .'</p>';
-				$out .= '</div>';
+					$out .= '<p class="wow fadeInUp title-about" data-wow-duration="1s" data-wow-delay=".3s">'. $description .'</p>';
+				//$out .= '</div>';
 			$out .= '</div>';
 
 			$out .= '<div class="row">';
@@ -1222,7 +1222,7 @@ function nt_big_border_features_grid_2_vc( $atts, $content = null ) {
 
 					$delay = (isset($fig['item_delay']) != '') ? 'data-wow-delay="'. isset($fig['item_delay']) .'s"' : '';
 
-					$out .= '<div class="col-md-3 col-sm-6 col-xs-12 col-xxs-12 template-feature wow fadeInUp equalize matchheightclass" data-wow-duration="1s" '.$delay.'>';
+					$out .= '<div class="col-md-6 col-sm-6 col-xs-12 col-xxs-12 template-feature wow fadeInUp equalize matchheightclass" data-wow-duration="1s" '.$delay.'>';
 						 if ( isset($fig['item_icon'])){  $out .= '<div class="template-icon"><i class="'.$fig['item_icon'].'"></i></div>'; }
 						$out .= '<div class="template-desc">';
 							 /*if ( isset($fig['item_heading'])){ $out .= '<h3>'.$fig['item_heading'].'<span> '.$fig['item_mini_heading'].'</span></h3>'; }*/

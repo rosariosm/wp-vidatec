@@ -161,21 +161,21 @@
 
 		});
 
-		if ( $(window).width() < 769 ) {
+		if ( $(window).width() < 990 ) {
 			$('#template-offcanvass ul li a:not(.dropdown-toggle)').click(function () {
 				$('.js-template-mobile-toggle').removeClass('active');
 				$('html').removeClass('mobile-menu-expanded');
 			});
 		}
-		if ( $(window).width() < 769 ) {
+		if ( $(window).width() < 990 ) {
 			$('body, html').addClass('template-overflow');
 		}
 
 		$(window).resize(function(){
-			if ( $(window).width() < 769 ) {
+			if ( $(window).width() < 990 ) {
 				$('body, html').addClass('template-overflow');
 			}
-			if ( $(window).width() > 767 ) {
+			if ( $(window).width() > 987 ) {
 				if ( $('html').hasClass('mobile-menu-expanded')) {
 					$('.js-template-mobile-toggle').removeClass('active');
 					$('html').removeClass('mobile-menu-expanded');
