@@ -364,7 +364,7 @@ function nt_big_border_about_1_vc( $atts, $content = null ) {
 			}
 			if( $heading2 !='' ) {
 				$out .= '<div class="col-md-4">';
-					$out .= '<div class="fifth-border color-white box2 border-color-blue  colored-boxes bg-color-blue lg-margin-b-30 border-radius-off">';
+					$out .= '<div class="fifth-border color-white box2 border-color-violet  colored-boxes bg-color-violet lg-margin-b-30 border-radius-off">';
 						$out .= '<h3 class="template-heading wow color-white" data-wow-duration="1s" data-wow-delay=".3s">'. $heading2 .'</h3>';
 						$out .= '<p>'. $description2 .'</p>';
 					$out .= '</div>';

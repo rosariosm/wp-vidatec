@@ -50,9 +50,9 @@
        id="style2">
 			.cls-1{fill:#bf00b9;}
 			.cls-2{
-        font-size: 17px;
+        font-size: 15px;
         fill: #fff;
-        font-family: &quot;Montserrat&quot;, Arial, sans-serif;
+        font-family: "Montserrat", Arial, sans-serif;
         font-weight:700;}
 			.cls-3{letter-spacing:-0.01em;}
 			.cls-4{letter-spacing:-0.02em;}

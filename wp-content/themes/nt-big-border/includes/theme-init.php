@@ -299,7 +299,7 @@ function nt_big_border_widgets_init() {
 		'name' => esc_html__( 'Footer', 'nt-big-border' ),
 		'id' => 'nt-big-border-footer',
 		'description' => esc_html__( 'Theme footer default area','nt-big-border' ),
-		'before_widget' => '<div class="col-md-3"><div class="widget %2$s">',
+		'before_widget' => '<div class="col-md-4"><div class="widget %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-head">',
 		'after_title' => '</h3>'
