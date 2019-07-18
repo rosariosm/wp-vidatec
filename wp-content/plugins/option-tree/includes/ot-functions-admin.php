@@ -563,22 +563,51 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
 				$input_safe = absint( $input );
 			}
 		} elseif ( in_array( $type, array( 'css', 'javascript', 'text', 'textarea', 'textarea-simple' ), true ) ) {
-			$filter = function( $tags, $context ) {
-				if ( 'post' === $context ) {
-					if ( current_user_can( 'unfiltered_html' ) || true === OT_ALLOW_UNFILTERED_HTML ) {
-						$tags['script'] = array_fill_keys( array( 'async', 'charset', 'defer', 'src', 'type' ), 1 );
-						$tags['style']  = array_fill_keys( array( 'media', 'type' ), 1 );
-						$tags['iframe'] = array_fill_keys( array( 'align', 'frameborder', 'height', 'longdesc', 'marginheight', 'marginwidth', 'name', 'sandbox', 'scrolling', 'src', 'srcdoc', 'width' ), 1 );
+			if ( ! function_exists( '_filter_wp_kses_post' ) ) {
+				/**
+				 * Filter the allowed HTML and safe CSS styles.
+				 *
+				 * @since 2.7.2
+				 *
+				 * @param bool $add Whether to add or remove the filter.
+				 */
+				function _filter_wp_kses_post( $add = true ) {
+					$css_filter = function ( $attr ) {
+						array_push( $attr, 'display', 'visibility' );
 
-						$tags = apply_filters( 'ot_allowed_html', $tags );
+						$attr = apply_filters( 'ot_safe_style_css', $attr );
+
+						return $attr;
+					};
+
+					$html_filter = function ( $tags, $context ) {
+						if ( 'post' === $context ) {
+							if ( current_user_can( 'unfiltered_html' ) || true === OT_ALLOW_UNFILTERED_HTML ) {
+								$tags['script']   = array_fill_keys( array( 'async', 'charset', 'defer', 'src', 'type' ), true );
+								$tags['style']    = array_fill_keys( array( 'media', 'type' ), true );
+								$tags['iframe']   = array_fill_keys( array( 'align', 'allowfullscreen', 'class', 'frameborder', 'height', 'id', 'longdesc', 'marginheight', 'marginwidth', 'name', 'sandbox', 'scrolling', 'src', 'srcdoc', 'style', 'width' ), true );
+								$tags['noscript'] = true;
+
+								$tags = apply_filters( 'ot_allowed_html', $tags );
+							}
+						}
+
+						return $tags;
+					};
+
+					if ( $add ) {
+						add_filter( 'safe_style_css', $css_filter );
+						add_filter( 'wp_kses_allowed_html', $html_filter, 10, 2 );
+					} else {
+						remove_filter( 'safe_style_css', $css_filter );
+						remove_filter( 'wp_kses_allowed_html', $html_filter );
 					}
 				}
-				return $tags;
-			};
+			}
 
-			add_filter( 'wp_kses_allowed_html', $filter, 10, 2 );
+			_filter_wp_kses_post( true );
 			$input_safe = wp_kses_post( $input );
-			remove_filter( 'wp_kses_allowed_html', $filter );
+			_filter_wp_kses_post( false );
 		} elseif ( 'date-picker' === $type || 'date-time-picker' === $type ) {
 			if ( ! empty( $input ) && (bool) strtotime( $input ) ) {
 				$input_safe = sanitize_text_field( $input );
@@ -731,29 +760,29 @@ if ( ! function_exists( 'ot_validate_setting' ) ) {
 				if ( is_scalar( $input ) ) {
 					$input_safe = sanitize_textarea_field( $input );
 				} else {
-
-					/**
-					 * Filter the array values recursively.
-					 *
-					 * @param array $values The value to sanitize.
-					 *
-					 * @return array
-					 */
-					function _sanitize_recursive( $values = array() ) {
-						$result = array();
-						foreach ( $values as $key => $value ) {
-							if ( ! is_object( $value ) ) {
-								if ( is_scalar( $value ) ) {
-									$result[ $key ] = sanitize_textarea_field( $value );
-								} else {
-									$result[ $key ] = _sanitize_recursive( $value );
+					if ( ! function_exists( '_sanitize_recursive' ) ) {
+						/**
+						 * Filter the array values recursively.
+						 *
+						 * @param array $values The value to sanitize.
+						 *
+						 * @return array
+						 */
+						function _sanitize_recursive( $values = array() ) {
+							$result = array();
+							foreach ( $values as $key => $value ) {
+								if ( ! is_object( $value ) ) {
+									if ( is_scalar( $value ) ) {
+										$result[ $key ] = sanitize_textarea_field( $value );
+									} else {
+										$result[ $key ] = _sanitize_recursive( $value );
+									}
 								}
 							}
+
+							return $result;
 						}
-
-						return $result;
 					}
-
 					$input_safe = _sanitize_recursive( $input );
 				}
 			}
@@ -5028,7 +5057,7 @@ if ( ! function_exists( 'ot_decode' ) ) {
 		preg_match( '/a:\d+:{.*?}/', $decoded, $array_matches, PREG_OFFSET_CAPTURE, 0 );
 
 		// Search for an object.
-		preg_match( '/O:\d+:"[a-z0-9_]+":\d+:{.*?}/i', $decoded, $obj_matches, PREG_OFFSET_CAPTURE, 0 );
+		preg_match( '/O|C:\+?\d+:"[a-z0-9_]+":\+?\d+:/i', $decoded, $obj_matches, PREG_OFFSET_CAPTURE, 0 );
 
 		// Prevent object injection or non arrays.
 		if ( $obj_matches || ! $array_matches ) {

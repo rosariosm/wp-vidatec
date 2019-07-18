@@ -50,10 +50,11 @@
        id="style2">
 			.cls-1{fill:#bf00b9;}
 			.cls-2{
-        font-size: 15px;
-        fill: #fff;
+        font-size: 22px;
+        fill: #ffffff;
         font-family: "Montserrat", Arial, sans-serif;
-        font-weight:700;}
+        font-weight:700;
+        }
 			.cls-3{letter-spacing:-0.01em;}
 			.cls-4{letter-spacing:-0.02em;}
 			.cls-5{fill:#ffd000;}
@@ -182,7 +183,7 @@
      id="text10"
      x="38.46064"
      y="262.69363"
-     style="font-weight:700;font-size:24.91335106px;font-family:Montserrat, Arial, sans-serif;fill:#ffffff;stroke-width:1.46549129">Evaluación</text>
+     >Evaluación</text>
   <path
      class="cls-5"
      d="M251,249,382.89,118.6h31.9V87.06l10.09-10,.35-.35-.34-.36h0l-.64-.66h0c-45.5-46.41-107-72-173.23-72-65.7,0-127,25.39-172.76,71.5h0l-1.09,1.11,0,0h0l-.35.35,7.42,7.34h36.15v35.73Z"
@@ -190,9 +191,9 @@
   <text
      class="cls-2"
      id="text14"
-     x="183.29572"
+     x="37%"
      y="114.25867"
-     style="font-weight:700;font-size:24.53843498px;font-family:Montserrat, Arial, sans-serif;fill:#ffffff;stroke-width:1.44343734">Planificación</text>
+     >Planificación</text>
   <path
      class="cls-6"
      d="M412.92,412.77H381.38V380.86L251,249,118.12,381.38l-33.92.26v36.15l-7,7.1-.31.32h0c45.51,46.41,106.9,71,173.15,71,65.7,0,127.45-26.89,173.23-73l-1.6-1.62Z"
@@ -200,9 +201,10 @@
   <text
      class="cls-2"
      id="text18"
-     x="153.17012"
+     x="32%"
      y="408.44031"
-     style="font-weight:700;font-size:24.32306671px;font-family:Montserrat, Arial, sans-serif;fill:#ffffff;stroke-width:1.43076861">Replanteamiento</text>
+     text-anchor="start"     
+     >Replanteamiento</text>
   <path
      class="cls-8"
      d="M421.94,80l-7.15,7.06V118.6h-31.9L251,249,381.37,380.86v31.91h31.54l10,10.08.35.36.35-.35h0l.65-.64h0c46.41-45.51,72-107,72-173.23,0-65.71-24.86-126.46-71-172.23h0l-2,2Z"
@@ -212,5 +214,5 @@
      id="text22"
      x="298.74249"
      y="260.69485"
-     style="font-weight:700;font-size:24.28777122px;font-family:Montserrat, Arial, sans-serif;fill:#ffffff;stroke-width:1.42869246">Implementación</text>
+     >Implementación</text>
 </svg>

@@ -101,7 +101,7 @@ class RWMB_File_Field extends RWMB_Field {
 		 */
 		if ( $attributes['required'] ) {
 			$attributes['data-required'] = 1;
-			$attributes['required'] = false;
+			$attributes['required']      = false;
 		}
 
 		$html .= sprintf(
@@ -167,13 +167,17 @@ class RWMB_File_Field extends RWMB_Field {
 		if ( $field['upload_dir'] ) {
 			$data = self::file_info_custom_dir( $file, $field );
 		} else {
-			$data = array(
+			$data      = array(
 				'icon'      => wp_get_attachment_image( $file, array( 60, 60 ), true ),
 				'name'      => basename( get_attached_file( $file ) ),
 				'url'       => wp_get_attachment_url( $file ),
 				'title'     => get_the_title( $file ),
-				'edit_link' => sprintf( '<a href="%s" class="rwmb-file-edit" target="_blank"><span class="dashicons dashicons-edit"></span>%s</a>', get_edit_post_link( $file ), $i18n_edit ),
+				'edit_link' => '',
 			);
+			$edit_link = get_edit_post_link( $file );
+			if ( $edit_link ) {
+				$data['edit_link'] = sprintf( '<a href="%s" class="rwmb-file-edit" target="_blank"><span class="dashicons dashicons-edit"></span>%s</a>', $edit_link, $i18n_edit );
+			}
 		}
 
 		return sprintf(
