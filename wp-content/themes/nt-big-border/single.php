@@ -15,7 +15,7 @@
 		}
 
 		$nt_big_border_single_hero[] .= 'class="template-cover template-cover-style-2 js-full-height-off section-class-scroll index-header"';
-		$nt_big_border_single_hero[] .= 'data-stellar-background-ratio="0.5"';
+		//$nt_big_border_single_hero[] .= 'data-stellar-background-ratio="0.5"';
 		$nt_big_border_single_hero[] .= 'data-next="yes"';
 	?>
 
@@ -29,7 +29,7 @@
 			</span>
 
 			<?php if ( ot_get_option( 'nt_big_border_single_overlay_visibility' ) != 'off' ) : ?>
-				<div class="template-overlay"></div>
+				<!--<div class="template-overlay"></div> -->
 			<?php endif; ?>
 
 			<div class="template-cover-text">
@@ -38,16 +38,23 @@
 						<div class="col-md-12 center">
 							<div class="template-cover-intro">
 
+								<?php
+                                  if(get_field('medio')) : ?>
+                                  	<h2 class="uppercase lead-heading"><span class="highlight"><?php the_field('medio'); ?></span></h2>
+	                                
+                                  
+                                <?php endif; ?>
+
 								<?php if ( ( $nt_big_border_single_disable_heading  ) != 'off') : ?>
-									<h2 class="uppercase lead-heading"><?php echo the_title();?></h2>
+									<h2 class="uppercase lead-heading second"><span class="highlight"><?php echo the_title();?></span></h2>
 								<?php endif; ?>
 
-								<?php if ( ( $nt_big_border_bread_visibility  ) != 'off') : ?>
-									<?php if( function_exists('bcn_display') ) : ?>
-										<p class="breadcrubms"> <?php  bcn_display();  ?></p>
-									<?php endif; ?>
-								<?php endif; ?>
-
+								<!--<?php //if ( ( $nt_big_border_bread_visibility  ) != 'off') : ?>
+									<?php //if( function_exists('bcn_display') ) : ?>
+										<p class="breadcrubms"> <?php  //bcn_display();  ?></p>
+									<?php //endif; ?>
+								<?php //endif; ?>
+                                -->
 							</div>
 						</div>
 					</div>
@@ -79,13 +86,13 @@
 
 						while ( have_posts() ) : the_post();
 							get_template_part( 'post-format/content', get_post_format() );
-							if ( comments_open() || '0' != get_comments_number() ) :
+							/*if ( comments_open() || '0' != get_comments_number() ) :
 								comments_template();
-							endif;
+							endif;*/
 						endwhile;
 
 						// post navigation
-						nt_big_border_post_nav();
+						//nt_big_border_post_nav();
 
 					?>
 

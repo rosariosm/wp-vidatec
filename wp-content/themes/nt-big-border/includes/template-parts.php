@@ -115,13 +115,13 @@ if ( ! function_exists( 'nt_big_border_formats_content' ) ) :
 					if ( ! is_single() ) :
 						the_title( sprintf( '<h2 class="entry-title all-caps"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 					endif;
+
 				?>
 			</div><!-- .entry-header -->
 
 			<ul class="entry-meta">
-				<li><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_time('F j, Y'); ?></a></li>
-				<li><?php esc_html_e('in', 'nt-big-border'); ?>  <?php the_category(', '); ?></li>
-				<li><?php the_author(); ?></li>
+				<li><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_time('j \d\e F'); ?></a></li>
+				<li><?php esc_html_e('en', 'nt-big-border'); ?>  <span class="capitalized"><?php the_category(', '); ?></span></li>
 				<?php the_tags( '<li>', ',', '</li> '); ?>
 			</ul>
 		</div>
@@ -152,14 +152,8 @@ if ( ! function_exists( 'nt_big_border_formats_content' ) ) :
 
 		<?php if (  is_single() ) : ?>
 			<div id="share-buttons">
-				<a href="http://www.facebook.com/sharer.php?u=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="http://twitter.com/share?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://plus.google.com/share?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.digg.com/submit?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-digg"></i></a>
-				<a href="http://reddit.com/submit?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-reddit"></i></a>
-				<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><i class="fa fa-pinterest"></i></a>
-				<a href="http://www.stumbleupon.com/submit?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="fa fa-stumbleupon"></i></a>
+				<a href="http://www.facebook.com/sharer.php?u=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="custom-icon-social icon-fb"></i></a>
+				<a href="http://twitter.com/share?url=<?php echo esc_url( get_permalink() ); ?>" target="_blank"><i class="custom-icon-social icon-tw"></i></a>				
 			</div>
 		<?php endif; // is_single() ?>
 
