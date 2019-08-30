@@ -38,16 +38,7 @@
 						<div class="col-md-12 center">
 							<div class="template-cover-intro">
 
-								<?php
-                                  if(get_field('medio')) : ?>
-                                  	<h2 class="uppercase lead-heading"><span class="highlight"><?php the_field('medio'); ?></span></h2>
-	                                
-                                  
-                                <?php endif; ?>
-
-								<?php if ( ( $nt_big_border_single_disable_heading  ) != 'off') : ?>
-									<h2 class="uppercase lead-heading second"><span class="highlight"><?php echo the_title();?></span></h2>
-								<?php endif; ?>
+								
 
 								<!--<?php //if ( ( $nt_big_border_bread_visibility  ) != 'off') : ?>
 									<?php //if( function_exists('bcn_display') ) : ?>

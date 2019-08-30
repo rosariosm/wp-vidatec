@@ -115,8 +115,19 @@ if ( ! function_exists( 'nt_big_border_formats_content' ) ) :
 					if ( ! is_single() ) :
 						the_title( sprintf( '<h2 class="entry-title all-caps"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 					endif;
-
 				?>
+
+
+				<?php
+                  if(get_field('medio')) : ?>
+                   	<h2 class="lead-heading first">
+                   	  <?php the_field('medio'); ?>
+                   	</h2>
+	              <?php endif; ?>
+                  <h2 class="lead-heading second">
+                  	<?php echo the_title();?>
+                  </h2>
+				
 			</div><!-- .entry-header -->
 
 			<ul class="entry-meta">

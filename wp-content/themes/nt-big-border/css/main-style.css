@@ -391,7 +391,7 @@ a:hover .lnk-icon-right {
   font-size: 13px;
   font-weight: normal;
   color: #7f8c8d;
-  color: #ffffff;
+  color: black;
   font-family: Arial, sans-serif;
   letter-spacing: 2px;
 }
@@ -399,7 +399,7 @@ a:hover .lnk-icon-right {
 .scroll-btn > *:hover,
 .scroll-btn > *:focus,
 .scroll-btn > *.active {
-  color: #ffffff;
+  color: black;
 }
 
 .scroll-btn > *:hover,
@@ -419,7 +419,7 @@ a:hover .lnk-icon-right {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 2px solid white;
+  border: 15px solid black !important;
   border-radius: 23px;
 }
 
@@ -431,7 +431,7 @@ a:hover .lnk-icon-right {
   width: 2px;
   height: 6px;
   margin: -2px 0 0 -1px;
-  background: white;
+  background: black;
   -webkit-animation: ani-mouse 2.5s linear infinite;
   -moz-animation: ani-mouse 2.5s linear infinite;
   animation: ani-mouse 2.5s linear infinite;
@@ -4040,10 +4040,19 @@ text-align: center;
     background: #8e299f;
 }
 .la-ball-triangle-path {
-    position: relative;
-	top: 50%;
+    position: absolute;
+	  top: 50%;
     left: 50%;
 }
+
+@media only screen and (max-width: 600px) {
+  .la-ball-triangle-path {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+  }
+}
+
 .la-ball-triangle-path > div {
     position: relative;
     box-sizing: content-box;
@@ -4879,13 +4888,14 @@ a.vc_btn3-color-juicy-pink {
   font-weight: bold;
 }
 
-a.vc_btn3-color-juicy-pink:nth-of-type(6n+1) {
-  background-color: blue !important;
+.vc_btn3.vc_btn3-color-juicy-pink, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat {
+  background-color: #96049e !important;
 }
 
-a.vc_btn3-color-juicy-pink:nth-of-type(6n+2) {
-  background-color: yellow !important;
-}
+
+#widget-area li:hover a:hover{
+  color: #96049e;
+} 
 
 .highlight {
   background: rgb(142, 41, 159);
@@ -4915,6 +4925,15 @@ ul.entry-meta a {
   margin-top: 7rem;
 }
 
+.lead-heading.first {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.lead-heading, .lead-heading.second {
+  color: #96049e;
+}
+
 .custom-icon-social {
   padding: 1em 2em 6rem 0;
 }
@@ -4931,4 +4950,8 @@ ul.entry-meta a {
   margin-top: 3rem !important;
   border-top: 2px solid black !important;
   border-bottom: none !important;
+}
+
+.entry-content div {
+  margin-bottom: 5px !important;
 }
