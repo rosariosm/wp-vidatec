@@ -1486,7 +1486,9 @@ footer .widget input.wpcf7-form-control.wpcf7-submit {
 */
 
 @media  (max-width: 1200px){
-
+  .index-header, .template-cover.index-header {
+    height: 100vh !important;
+  }
 }
 
 @media  (max-width: 991px){
@@ -1505,7 +1507,9 @@ footer .widget input.wpcf7-form-control.wpcf7-submit {
 		margin-bottom: 15px;
 	}
 
-
+	.index-header, .template-cover.index-header  {
+		height: 50vh !important;
+	}
 }
 
 @media  (max-width: 768px){
@@ -1515,8 +1519,8 @@ footer .widget input.wpcf7-form-control.wpcf7-submit {
 		max-height: 50px;
 		margin-top: 90px;
 	}
-	.index-header {
-		height: 100vh !important;
+	.index-header, .single .index-header {
+		height: 40vh !important;
 	}
 
 }
@@ -1528,6 +1532,9 @@ footer .widget input.wpcf7-form-control.wpcf7-submit {
 	}
 	.comments ul li .who-comment {
 		margin-left: 0;
+	}
+	.index-header, .single .index-header {
+		height: 30vh !important;
 	}
 }
 .topcontrol{
