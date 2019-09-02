@@ -266,7 +266,7 @@ function nt_big_border_css_options() {
                 $theCSS .= '.'.$id.' .index-header .cover-text-sublead { color: '. esc_attr( ot_get_option( 'nt_big_border_'.$name.'headerparagraphcolor' ) ) .'; }';
             }
             if ( ot_get_option( 'nt_big_border_'.$name.'headerbgheight' ) !='' ){
-                $theCSS .= '.'.$id.' .index-header { height: '. esc_attr( ot_get_option( 'nt_big_border_'.$name.'headerbgheight' ) ) .'vh !important; }';
+                $theCSS .= '.'.$id.' .index-header { height: '. esc_attr( ot_get_option( 'nt_big_border_'.$name.'headerbgheight' ) ) .'vh; }';
             }
             if ( ot_get_option( 'nt_big_border_'.$name.'_hero_visibility' ) == 'off' ){
                 $theCSS .= '#blog.nt-'.$name.'-content{ padding-top: 150px !important; }';
